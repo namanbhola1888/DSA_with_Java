@@ -1,11 +1,14 @@
-
 import java.util.HashSet;
 
 public class valid_sudoku {
 
     public boolean isValidSudoku(char[][] board) {
+
+        @SuppressWarnings("unchecked")
         HashSet<Character>[] rows = new HashSet[9];
+        @SuppressWarnings("unchecked")
         HashSet<Character>[] cols = new HashSet[9];
+        @SuppressWarnings("unchecked")
         HashSet<Character>[] box = new HashSet[9];
 
         for(int i=0; i<9; i++){
@@ -18,7 +21,7 @@ public class valid_sudoku {
             for(int j=0; j<9; j++){
                 char val = board[i][j];
 
-                if(val == '.') continue;;
+                if(val == '.') continue;
                 int boxindex = (i / 3) * 3 + (j / 3);
 
                 if(rows[i].contains(val) || cols[j].contains(val) || box[boxindex].contains(val)){
