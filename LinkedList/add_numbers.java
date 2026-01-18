@@ -1,3 +1,4 @@
+
 class ListNode {
     int val;
     ListNode next;
@@ -6,7 +7,7 @@ class ListNode {
     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }
 
-public class merge_list {
+public class add_numbers {
 
     public static void printList(ListNode head) {
         ListNode temp = head;
@@ -17,32 +18,36 @@ public class merge_list {
         System.out.println("null");
     }
 
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-
-        if (list1 == null) return list2;
-        if (list2 == null) return list1;
-
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(-1);
         ListNode newlist = dummy;
 
-        ListNode temp1 = list1;
-        ListNode temp2 = list2;
+        ListNode temp1 = l1;
+        ListNode temp2 = l2;
 
-        while(temp1 != null && temp2 != null){
-            if(temp1.val <= temp2.val){
-                newlist.next = temp1;
-                temp1 = temp1.next;
-            }
-            else{
-                newlist.next = temp2;
-                temp2 = temp2.next;
-            }
+        int carry=0;
+        int x,y,sum,digit;
 
+        while(temp1 != null || temp2!= null){
+            x = (temp1 != null) ? temp1.val : 0;
+            y = (temp2 != null) ? temp2.val : 0;
+
+
+            sum = x + y + carry;
+            carry = sum / 10;
+            digit = sum % 10;
+
+            newlist.next = new ListNode(digit);
             newlist = newlist.next;
-        } 
 
-        if (temp1 != null) newlist.next = temp1;
-        if (temp2 != null) newlist.next = temp2;
+            if (temp1 != null) temp1 = temp1.next;
+            if (temp2 != null) temp2 = temp2.next;
+
+        }
+
+        if (carry > 0) {
+            newlist.next = new ListNode(carry);
+        }
 
         return dummy.next;
     }
@@ -56,18 +61,19 @@ public class merge_list {
         }
         return dummy.next;
     }
-    
-    public static void main(String[] args) {
-        int[] arr1 = {1,2,4};
-        int[] arr2 = {1,3,4};
 
+    public static void main(String[] args) {
+
+        int[] arr1 = {2,4,3};
+        int[] arr2 = {5,6,4};
+        
         ListNode list1 = arrayToList(arr1);
         ListNode list2 = arrayToList(arr2);
 
-        merge_list obj = new merge_list();
-        ListNode merged = obj.mergeTwoLists(list1, list2);
+        add_numbers obj = new add_numbers();
+        ListNode head = obj.addTwoNumbers(list1, list2);
 
-        printList(merged);
+        printList(head);
 
     }
 }
