@@ -14,8 +14,6 @@ class TreeNode {
     }
 }
 
-
-
 public class max_depth {
 
     public int maxDepth(TreeNode root) {
