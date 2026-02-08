@@ -51,8 +51,7 @@ public class avg_level {
         p.right.right = new TreeNode(7);
 
         avg_level obj = new avg_level();
-        List<Double> list = new ArrayList<>();
-        list = obj.averageOfLevels(p);
+        List<Double> list = obj.averageOfLevels(p);
 
         for(double x : list){
             System.out.printf("%.5f ", x);
