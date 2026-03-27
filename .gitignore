@@ -1,0 +1,11 @@
+# Ignore compiled Java files
+*.class
+
+# Optional (recommended)
+*.log
+*.jar
+*.war
+*.ear
+bin/
+build/
+out/
