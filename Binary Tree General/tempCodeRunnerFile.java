@@ -1,0 +1,1 @@
+postIndex < 0
