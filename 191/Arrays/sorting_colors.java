@@ -25,9 +25,9 @@ public class sorting_colors {
             }
         }
 
-        // for(int i=0; i<nums.length; i++){
-        //     System.out.print(nums[i] + " ");
-        // }
+        for(int i=0; i<nums.length; i++){
+            System.out.print(nums[i] + " ");
+        }
     }
 
     public static void main(String[] args){
