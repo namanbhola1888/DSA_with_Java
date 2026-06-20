@@ -9,6 +9,7 @@ public class four4Sum {
     }
 
     public static void main(String[] args){
+        // Array
         int[] nums = {1,0,-1,0,-2,2};
         int target = 0;
 
