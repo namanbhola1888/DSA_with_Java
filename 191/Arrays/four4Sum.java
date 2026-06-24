@@ -47,8 +47,7 @@ public class four4Sum {
         int target = 0;
 
         four4Sum obj = new four4Sum();
-        List<List<Integer>> result = new ArrayList<>();
-        result = obj.fourSum(nums, target);
+        List<List<Integer>> result = obj.fourSum(nums, target);
 
         System.out.println(result);
     }
