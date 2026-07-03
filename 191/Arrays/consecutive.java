@@ -3,7 +3,6 @@ public class consecutive{
     public int findMaxConsecutiveOnes(int[] nums) {
         int max_count = 0;
         int count = 0;
-        int n = nums.length;
 
         for(int num: nums){
             if(num == 1){
