@@ -42,6 +42,7 @@ public class rotateList{
         return dummy.next;
     }
     public static void main(String[] args) {
+        // array
         int[] arr = {1,2,3,4,5};
         int k = 2;
 
