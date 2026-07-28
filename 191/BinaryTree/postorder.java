@@ -58,6 +58,7 @@ public class postorder {
     }
 
     public static void main(String[] args){
+        // Array
         Integer[] arr = {1, null, 2, 3};
 
         postorder obj = new postorder();
