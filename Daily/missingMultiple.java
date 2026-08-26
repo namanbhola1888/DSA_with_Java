@@ -2,9 +2,8 @@ import java.util.HashSet;
 
 public class missingMultiple {
 
-    public int missingMultiple(int[] nums, int k) {
+    public int missMultiple(int[] nums, int k) {
         HashSet<Integer> set = new HashSet<>();
-        int n = nums.length;
 
         for(int num: nums){
             set.add(num);
@@ -23,6 +22,6 @@ public class missingMultiple {
         int k =2;
 
         missingMultiple obj = new missingMultiple();
-        System.out.println(obj.missingMultiple(nums, k));
+        System.out.println(obj.missMultiple(nums, k));
     }
 }
