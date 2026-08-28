@@ -59,6 +59,7 @@ public class kSmallest {
     }
 
     public static void main(String[] args) {
+        // Integer Array
         Integer[] arr = {5,3,6,2,4,null,null,1};
         int k = 3;
 
