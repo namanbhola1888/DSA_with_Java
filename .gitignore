@@ -9,6 +9,7 @@
 bin/
 build/
 out/
+venv
 
 tempCodeRunnerFile.java
 OOPs/oop_lld_interview_guide.md
@@ -16,3 +17,6 @@ OOPs
 
 __pycache__
 tempCodeRunnerFile.py
+
+practice.db
+SQL
