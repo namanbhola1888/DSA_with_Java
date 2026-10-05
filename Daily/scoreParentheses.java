@@ -1,0 +1,29 @@
+public class scoreParentheses{
+    public int scoreOfParentheses(String S) {
+        return F(S, 0, S.length());
+    }
+
+    private int F(String S, int i, int j) {
+        int ans = 0, bal = 0;
+
+        for (int k = i; k < j; ++k) {
+            bal += S.charAt(k) == '(' ? 1 : -1;
+            if (bal == 0) {
+                if (k - i == 1) {
+                    ans++;
+                } else {
+                    ans += 2 * F(S, i + 1, k);
+                }
+                i = k + 1; 
+            }
+        }
+
+        return ans;
+    }
+    public static void main(String[] args){
+        String s = "()";
+
+        scoreParentheses obj = new scoreParentheses();
+        System.out.println(obj.scoreOfParentheses(s));
+    }
+}
